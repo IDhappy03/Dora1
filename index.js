@@ -275,7 +275,7 @@ client.on('message', (message) => {
 
   //봇 정보 | 서버정보
 
-  if (message.content == "!!si") {
+  if (message.content == "!!si" || message.content === "!!냐") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/attachments/747789641826172948/750699703758225448/744af0d16a6eddc1.jpg"
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]")
