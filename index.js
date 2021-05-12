@@ -195,38 +195,6 @@ client.on('message', (message) => {
 
     message.channel.send({embed:embed})
   }
-  // if(message.content === '1') {
-  //   let embed = new Discord.MessageEmbed()
-  //   .setTitle('덕영고 4월26일 시험')
-  //   .setColor()
-  //   .addField('오전등교', true)
-  //   .setImage('https://cdn.discordapp.com/attachments/827015137764048927/835802655124357140/unknown.png')
-  //   message.channel.send(embed)
-  // }
-  // if(message.content === '2') {
-  //   let embed = new Discord.MessageEmbed()
-  //   .setTitle('덕영고 4월27일 시험')
-  //   .setColor()
-  //   .addField('오전등교' , true)
-  //   .setImage('https://cdn.discordapp.com/attachments/827015137764048927/835802719913508904/unknown.png')
-  //   message.channel.send(embed)
-  // }
-  // if(message.content === '3') {
-  //   let embed = new Discord.MessageEmbed()
-  //   .setTitle('덕영고 4월28일 시험')
-  //   .setColor()
-  //   .addField('오후등교', true)
-  //   .setImage('https://cdn.discordapp.com/attachments/827015137764048927/835803265039859722/unknown.png')
-  //   message.channel.send(embed)
-  // }
-  // if(message.content === '4') {
-  //   let embed = new Discord.MessageEmbed()
-  //   .setTitle('덕영고 4월29일 시험')
-  //   .setColor()
-  //   .addField('오전등교', true)
-  //   .setImage('https://cdn.discordapp.com/attachments/827015137764048927/835804453571133470/unknown.png')
-  //   message.channel.send(embed)
-  // }
   if(message.content === '!!내정보') {
     if(message.channel.type === 'dm') 
     return message.reply("\`dm\`에서 사용할 수 없는 명령어 입니다.") 
@@ -281,7 +249,7 @@ client.on('message', (message) => {
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]")
     embed.setColor("#186de6")
     embed.setAuthor(`${message.guild.name}의 서버 정보`, img)
-    embed.setFooter(`덕영고 BOT ❤️`)
+    embed.setFooter(`도라에몽 BOT ❤️`)
     embed.addField("RAM usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)
     embed.addField("running time", `${duration}`, true)
     embed.addField("user", `${client.users.cache.size}`, true)
